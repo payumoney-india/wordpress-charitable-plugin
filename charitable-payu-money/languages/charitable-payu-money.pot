@@ -1,0 +1,109 @@
+# Copyright (C) 2016 WP Charitable
+# This file is distributed under the same license as the Charitable - PayUMoney package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Charitable - PayUMoney 1.1.0\n"
+"Report-Msgid-Bugs-To: https://www.wpcharitable.com/\n"
+"POT-Creation-Date: 2016-06-29 05:16:18+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"Last-Translator: WP-Translations (http://wp-translations.org/)\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+
+#: includes/class-charitable-extension-activation.php:45
+msgid "This plugin"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:81
+msgid "activate it"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:84
+msgid "install it"
+msgstr ""
+
+#: includes/class-charitable-extension-activation.php:87
+msgid " requires Charitable! Please %s to continue!"
+msgstr ""
+
+#: includes/class-charitable-payu-money.php:191
+msgid "Settings"
+msgstr ""
+
+#: includes/class-charitable-payu-money.php:342
+#: includes/class-charitable-payu-money.php:353
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:35
+#: includes/gateway/class-charitable-gateway-payu-money.php:38
+msgid "PayUMoney"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:83
+msgid "Live Merchant Key"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:89
+msgid "Live Merchant Salt"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:95
+msgid "Test Merchant Key"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:101
+msgid "Test Merchant Salt"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:189
+msgid "Donation %d"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:283
+msgid "Security Error. Illegal access detected."
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:301
+msgid ""
+"The donation key in the response does not match the donation. Response "
+"data: %s"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:311
+msgid ""
+"The amount in the response does not match the expected donation amount. "
+"Response data: %s"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:319
+msgid "PayU India Transaction ID: %s"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:329
+msgid ""
+"Unfortunately, your donation was declined by our payment gateway. Error "
+"message: %s"
+msgstr ""
+
+#: includes/gateway/class-charitable-gateway-payu-money.php:379
+msgid "PayU India only accepts payments in Indian Rupees. %sChange Now%s"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Collect donations through PayUMoney in India."
+msgstr ""
