@@ -1,6 +1,6 @@
 <?php
 /**
- * PayUMoney Gateway class
+ * PayUmoney Gateway class
  *
  * @version     1.0.0
  * @package     Charitable/Classes/Charitable_Gateway_PayU_Money
@@ -156,7 +156,7 @@ if ( ! class_exists( 'Charitable_Gateway_PayU_Money' ) ) :
 		 */
 		public function get_base_url() {
 			if ( charitable_get_option( 'test_mode' ) ) {
-				return 'https://test.payu.in/_payment';
+				return 'https://sandboxsecure.payu.in/_payment';
 			}
 
 			return 'https://secure.payu.in/_payment';
@@ -188,8 +188,8 @@ if ( ! class_exists( 'Charitable_Gateway_PayU_Money' ) ) :
 			$amount 	  = $donation->get_total_donation_amount( true );
 			$product_info = sprintf( __( 'Donation %d', 'charitable-payu-money' ), $donation->ID );
 			$keys 		  = $gateway->get_keys();
-
-			$str = "{$keys['merchant_key']}|{$donation_key}|{$amount}|{$product_info}|{$first_name}|{$email}|{$donation->ID}||||||||||{$keys['salt']}";
+			$udf5="Charitable_v_1.2";
+			$str = "{$keys['merchant_key']}|{$donation_key}|{$amount}|{$product_info}|{$first_name}|{$email}|{$donation->ID}|||||{$udf5}|||||{$keys['salt']}";
 			$hash = strtolower( hash( 'sha512', $str ) );
 
 			$return_url = charitable_get_permalink( 'donation_receipt_page', array( 'donation_id' => $donation->ID ) );
@@ -222,6 +222,7 @@ if ( ! class_exists( 'Charitable_Gateway_PayU_Money' ) ) :
 				'surl'          	=> $return_url,
 				'furl'          	=> $cancel_url,
 				'hash'          	=> $hash,
+				'udf5'				=> $udf5,
 				'service_provider'  => 'payu_paisa',
 			), $donation );
 
@@ -239,12 +240,11 @@ if ( ! class_exists( 'Charitable_Gateway_PayU_Money' ) ) :
 		var form = document.getElementById('payu-money-form');
 		form.submit();
 	}
-
-	window.onload = charitable_submit_payu_money_form;
+	
+	window.onload = charitable_submit_payu_money_form();
 	</script>
 			<?php
 			$content = ob_get_clean();
-
 			return $content;
 		}
 
@@ -265,7 +265,7 @@ if ( ! class_exists( 'Charitable_Gateway_PayU_Money' ) ) :
 			$donation_id = $_REQUEST['udf1'];
 			$donation_key = $_REQUEST['txnid'];
 			$amount = $_REQUEST['amount'];
-
+			
 			if ( $donation_id != $donation->ID ) {
 				return;
 			}
@@ -275,7 +275,8 @@ if ( ! class_exists( 'Charitable_Gateway_PayU_Money' ) ) :
 				$keys = $gateway->get_keys();
 				$hash = $_REQUEST['hash'];
 				$status = $_REQUEST['status'];
-				$checkhash = hash( 'sha512', "{$keys['salt']}|$status||||||||||$donation_id|$_REQUEST[email]|$_REQUEST[firstname]|$_REQUEST[productinfo]|$amount|$donation_key|{$keys['merchant_key']}" );
+				$udf5 = $_REQUEST['udf5'];
+				$checkhash = hash( 'sha512', "{$keys['salt']}|$status|||||{$udf5}|||||$donation_id|$_REQUEST[email]|$_REQUEST[firstname]|$_REQUEST[productinfo]|$amount|$donation_key|{$keys['merchant_key']}" );
 
 				/* If the $hash and $checkhash don't match, it has been tampered with. */
 				if ( $hash != $checkhash ) {

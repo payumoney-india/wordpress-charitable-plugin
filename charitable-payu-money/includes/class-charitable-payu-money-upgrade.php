@@ -1,11 +1,11 @@
 <?php
 /**
- * Charitable PayUMoney Upgrade class.
+ * Charitable PayUmoney Upgrade class.
  * 
  * The responsibility of this class is to manage migrations between versions of Charitable PayUMoney.
  *
- * @package     Charitable PayUMoney
- * @subpackage  Charitable PayUMoney/Upgrade
+ * @package     Charitable PayUmoney
+ * @subpackage  Charitable PayUmoney/Upgrade
  * @copyright   Copyright (c) 2015, Eric Daams  
  * @license     http://opensource.org/licenses/gpl-1.0.0.php GNU Public License
  * @since       1.0.0

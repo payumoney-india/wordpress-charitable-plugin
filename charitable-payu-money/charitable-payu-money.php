@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: 		Charitable - PayUMoney
+ * Plugin Name: 		Charitable - PayUmoney
  * Plugin URI: 			https://www.wpcharitable.com/extensions/charitable-payu-money/
  * Description: 		Collect donations through PayUMoney in India.
- * Version: 			1.1.0
+ * Version: 			1.2.0
  * Author: 				WP Charitable
  * Author URI: 			https://www.wpcharitable.com
  * Requires at least: 	4.1

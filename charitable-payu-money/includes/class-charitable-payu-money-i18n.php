@@ -1,9 +1,9 @@
 <?php
 /**
- * Sets up translations for Charitable PayU_Money.
+ * Sets up translations for Charitable PayUmoney.
  *
  * @package     Charitable/Classes/Charitable_i18n
- * @version     1.0.0
+ * @version     1.2.0
  * @author      Eric Daams
  * @copyright   Copyright (c) 2015, Studio 164a
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License  

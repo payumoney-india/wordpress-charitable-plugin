@@ -1,10 +1,10 @@
 <?php
 /**
- * The main Charitable PayUMoney class.
+ * The main Charitable PayUmoney class.
  * 
  * The responsibility of this class is to load all the plugin's functionality.
  *
- * @package     Charitable PayUMoney
+ * @package     Charitable PayUmoney
  * @copyright   Copyright (c) 2015, Eric Daams  
  * @license     http://opensource.org/licenses/gpl-1.0.0.php GNU Public License
  * @since       1.0.0
@@ -24,7 +24,7 @@ class Charitable_PayU_Money {
     /**
      * @var string
      */
-    const VERSION = '1.1.0';
+    const VERSION = '1.2.0';
 
     /**
      * @var string  A date in the format: YYYYMMDD
